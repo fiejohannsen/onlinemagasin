@@ -1,0 +1,487 @@
+/*Vigtig regel, der er relevant for hele hjemmeside. Stjernen betyder, at det er en universal regel. Når der laves en "*{}" gælder det for hele dokumentet */
+
+/*Padding/margin
+0px = alle 4 sider
+0px 0px = enten top og bund eller højre og venstre side
+0px 0px 0px 0px = top, højre, bund, venstre
+
+
+Centrering = Margin: 0px auto; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Sørger for at kasserne holder sig inden for de vidder og bredder de bliver givet og så de ikke forskyder sig, hvis der f.eks. bliver lagt padding på et element. */
+}
+
+body {
+    background-color: white;
+    font-family: 'Poppins', sans-serif;    
+    line-height: 35px;
+    color: #707070;
+}
+
+
+
+/*STYLE TIL LOGO OG HEADER*/
+.logo {
+    width: 50%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+header,
+logo {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-size: cover;
+}
+
+/*STYLE TL NAV*/
+nav {
+    width: 100%;
+    height: 55px;
+    background-color: #F2E4DE;
+    top: 0;
+    position: sticky;
+    font-family: poppins;
+}
+
+nav > ul {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    list-style-type: none;
+    line-height: 55px;
+    display: flex;
+    justify-content: center;
+}
+
+nav > ul > li > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #707070;
+    text-decoration: none;
+    width: 150px;
+    transition: .5s;
+}
+
+nav > ul > li > a:hover {
+    background-color: #FFF9F7;
+    transition: 0.5;
+    color: #707070;
+    cursor: pointer;
+    font-family: poppins;
+}
+
+/*STYLE TIL DROPDOWN*/
+.dropdown {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    height: 0;
+    background-color: #FFF9F7;
+    color: #707070;
+    display: flex;
+
+}
+
+ul > li:hover .dropdown {
+    height: 64vh;
+    width: 200%;
+    display: flex;
+    left: -320px;
+}
+
+.dropdown a {
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    text-decoration: none;
+    font-family: poppins;
+    color: #707070;
+}
+
+.dropdown a:hover {
+    background-color: #F2E4DE;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.guide {
+    text-align: right;
+    float: left;
+    width: 100%;
+    border-right: #707070;
+    list-style-type: none;
+    padding: 30px;
+
+}
+
+.diy {
+    text-align: left;
+    float: right;
+    width: 100%;
+    border-left: #707070;
+    list-style-type: none;
+    padding: 30px;
+}
+
+/*STYLE TIL INDEX-MAIN*/
+.indexmain {
+    width: 100%;
+    min-height: 80vh;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.indexsection {
+    width: 100%;
+    min-height: 40px;
+    margin: 0px auto;
+    /*0 auto giver lige meget margin på alle sider af kassen, så den rykkes i midten*/
+    text-align: center;
+    /* rykker alle kasser ind i midten af sectionen*/
+    display: flex;
+    justify-content: center;
+
+}
+
+.indexsection > div {
+    display: inline-block;
+    width: 27%;
+    height: 100%;
+    overflow: hidden;
+    transition: .5s;
+    margin: 20px 10px 0px 10px;
+}
+
+.indexsection > div > img {
+    width: 100%;
+border: solid #707070 2px;
+    
+}
+
+.scroll {
+    width: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.om {
+    width: 100%;
+    height: 80vh;
+    background-color: #DBD3D3;
+    display: flex;
+}
+
+.om > div {
+    width: 50%;
+}
+
+.om > div:first-child {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.fie {
+    width: 60%;
+    border: solid 2px #707070;
+}
+
+.ompic {
+    width: 50%;
+    margin: 20px;
+}
+
+.om > div > p {
+    width: 55%;
+    margin-left: 40px;
+    color: #7B5454;
+    line-height: 35px;
+
+
+}
+
+
+
+/*STYLE TIL INDEX-FOOTER*/
+
+footer {
+    width: 90%;
+    height: 11vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer > a > img {
+    width: 30px;
+    margin: 10px 5px 5px 5px;
+}
+
+
+/*STYLE TIL HAEKLE-MAIN*/
+
+.haeklemain {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.haeklemain > ul {
+    padding: 0px 20px;
+}
+
+.haeklelink {
+    text-decoration:none;
+    color: #707070;
+}
+
+.video {
+    text-align: center;
+}
+
+/*STYLE TIL MATERIALE-MAIN*/
+
+.materialemain {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.materialesection1 {
+    width: 100%;
+    text-align: center;
+}
+
+.materialesection1 > div {
+    width: 45%;
+    display: inline-block;
+    margin: 10px auto;
+}
+
+.materialesection1 > div > img {
+    width: 90%;
+    border: solid #707070 2px;
+    
+}
+
+
+
+
+.materialesection2 {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.materialesection2 > div > img {
+    width: 60%;
+    float: right;
+    border: solid #707070 2px;
+    margin-bottom: 10px;
+}
+
+.materialesection2 > div > p {
+    width: 140%;
+    margin: 90px auto;
+
+
+}
+
+/*STYLE TIL OPSKRIFT-MAIN*/
+
+.opskriftmain {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.tabel {
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+/*MEDIA-QUERIES*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width: 600px) {
+/* Styles */
+    
+/*HEADER/LOGO STYLE*/    
+    
+header {
+        height: 7vh;
+    }
+    
+/*NAV STYLE*/
+    
+nav {
+    width: 100%;
+    height: 165px;
+    background-color: #F2E4DE;
+    top: 0;
+    font-family: poppins;
+}
+
+nav > ul {
+    width: 100%;
+    margin: 0 auto;
+    list-style-type: none;
+    line-height: 55px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+nav > ul > li > a {
+        display: flex;
+        width: 100%;  
+    
+    }
+    
+/*DROPDOWN STYLE*/
+
+/*STYLE TIL DROPDOWN*/
+.dropdown {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    height: 0;
+    background-color: #FFF9F7;
+    color: #707070;
+    display: flex;
+}
+
+ul > li:hover .dropdown {
+    height: 64vh;
+    width: 100%;
+    display: flex;
+    left: 0;
+
+}
+
+.dropdown a {
+    height: 50px;
+    width: 100%;
+    text-decoration: none;
+    font-family: poppins;
+    color: #707070;
+}
+
+.dropdown a:hover {
+    background-color: #F2E4DE;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.guide {
+    text-align: right;
+    float: left;
+    width: 100%;
+    border-right: #707070;
+    list-style-type: none;
+    padding: 30px;
+
+}
+
+.diy {
+    text-align: left;
+    float: right;
+    width: 100%;
+    border-left: #707070;
+    list-style-type: none;
+    padding: 30px;
+}
+
+/*Hej Michelle
+    Jeg kunne ikke få min dropdown til at virke i mobilstørrelse, da min dropdown jo ikke er click-able men mouseover.... Øv.
+    
+    Jeg nåede kun at lave mediaqueries på min forside.*/    
+    
+    
+/*INDEX STYLE*/
+    
+.indexsection {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.indexsection > .shown {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 20px 10px 0px 10px;
+}
+
+.indexsection > div > img {
+    width: 100%;
+border: solid #707070 2px;
+    
+}
+    
+.hidden {
+        display: none;
+    }
+    
+.scroll {
+        display: none;
+    }
+
+.om {
+    width: 100%;
+    height: 110vh;
+    background-color: #DBD3D3;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.om > div {
+    width: 100%;
+}
+
+.om > div:first-child {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.fie {
+    width: 80%;
+    border: solid 2px #707070;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.ompic {
+    width: 40%;
+    position: center;
+}
+
+.om > div > p {
+    width: 80%;
+    margin: 0px auto;
+    color: #7B5454;
+    line-height: 30px;
+    font-size: 15px;
+
+
+}
+}
+    
+
+
